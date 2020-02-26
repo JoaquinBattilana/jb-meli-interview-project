@@ -3,7 +3,7 @@ import React from 'react';
 function Home() {
   return (
     <h1>
-      {process.env.TEST}
+      Esto es un test del bootstrap!
     </h1>
   );
 }

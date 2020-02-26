@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next ./src",
+    "dev": "next ./src -p ${PORT:-3000}",
     "build": "next build ./src",
-    "start": "next start ./src",
-    "heroku-postbuild": "next start ./src -p $PORT",
+    "start": "next start ./src -p ${PORT:-3000}",
     "lint": "eslint src/**/*.tsx src/**/*.js src/**/*.ts"
   },
   "keywords": [],
