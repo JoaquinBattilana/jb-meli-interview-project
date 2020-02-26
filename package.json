@@ -7,6 +7,7 @@
     "dev": "next ./src",
     "build": "next build ./src",
     "start": "next start ./src",
+    "heroku-postbuild": "next start ./src -p $PORT",
     "lint": "eslint src/**/*.tsx src/**/*.js src/**/*.ts"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "dotenv": "^8.2.0",
     "next": "^9.2.2",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
