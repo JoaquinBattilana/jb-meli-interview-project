@@ -5,3 +5,7 @@ node_modules
 # next build files
 
 .next
+
+# environment variables
+
+*.env
