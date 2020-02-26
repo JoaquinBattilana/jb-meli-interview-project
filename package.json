@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next ./src",
     "build": "next build ./src",
-    "start": "next start ./src"
+    "start": "next start ./src",
+    "lint": "eslint src/**/*.tsx src/**/*.js src/**/*.ts"
   },
   "keywords": [],
   "author": "Joaquin Battilana",
