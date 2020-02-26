@@ -4,6 +4,6 @@ const withSass = require('@zeit/next-sass');
 module.exports = withSass({
   cssModules: true,
   env: {
-    TEST: process.env.TEST
+    PORT: process.env.PORT
   }
 });
