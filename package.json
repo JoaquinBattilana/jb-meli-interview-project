@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "jb-meli-frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "start": "next start ./src"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joaquin Battilana",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
