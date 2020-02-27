@@ -4,6 +4,7 @@ import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
 import { appWithTranslation } from '~config/i18n';
 import createStore from '~redux/store';
+import '~scss/application.scss';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {

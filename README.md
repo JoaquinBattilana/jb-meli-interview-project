@@ -14,3 +14,4 @@ plugins babel
 internacionalizacion
 redux + redux forms
 sass global files, colores con http://chir.ag/projects/name-that-color/
+CSS resets + system font stack
