@@ -32,8 +32,9 @@ module.exports = {
     }
   },
   rules: {
-    'react/jsx-filename-extension': "off",
-    'comma-dangle': "off",
-    'import/extensions': "off"
+    'react/jsx-filename-extension': 'off',
+    'comma-dangle': 'off',
+    'import/extensions': 'off',
+    'react/jsx-props-no-spreading': 'off'
   }
 };

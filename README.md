@@ -10,3 +10,5 @@ sass-modules
 porque travis?
 github settings del proyecto y codeowners
 dotenv + heroku deployment, nuevas reglas github
+plugins babel
+internacionalizacion
