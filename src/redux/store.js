@@ -1,14 +1,10 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
-function testReducer(state = { foo: '' }, action) {
-  switch (action.type) {
-    case 'FOO':
-      return { ...state, foo: action.payload };
-    default:
-      return state;
-  }
-}
+const rootReducer = combineReducers({
+  form: formReducer
+});
 
-const makeStore = (initialState) => createStore(testReducer, initialState);
+const makeStore = (initialState) => createStore(rootReducer, initialState);
 
 export default makeStore;
