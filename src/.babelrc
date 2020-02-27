@@ -8,7 +8,8 @@
         "~components": "./src/components",
         "~pages": "./src/pages",
         "~config": "./src/config",
-        "~redux": "./src/redux"
+        "~redux": "./src/redux",
+        "~webpack": "./src/webpack"
       }
     }]
   ]

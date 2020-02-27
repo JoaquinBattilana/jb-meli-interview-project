@@ -22,7 +22,8 @@
       "~components/*": ["components/*"],
       "~pages/*": ["pages/*"],
       "~config/*": ["config/*"],
-      "~redux/*": ["redux/*"]
+      "~redux/*": ["redux/*"],
+      "~webpack/*": ["webpack/*"]
     }
   },
   "exclude": [
