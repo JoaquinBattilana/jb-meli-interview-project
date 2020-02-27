@@ -1,9 +1,9 @@
 import React from 'react';
-import TestComponent from '~components/TestComponent';
+import Navbar from '~components/Navbar';
 
 function Home() {
   return (
-    <TestComponent />
+    <Navbar />
   );
 }
 

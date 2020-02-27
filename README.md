@@ -12,3 +12,4 @@ github settings del proyecto y codeowners
 dotenv + heroku deployment, nuevas reglas github
 plugins babel
 internacionalizacion
+redux + redux forms
