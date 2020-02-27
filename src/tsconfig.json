@@ -23,7 +23,7 @@
       "~pages/*": ["pages/*"],
       "~config/*": ["config/*"],
       "~redux/*": ["redux/*"],
-      "~webpack/*": ["webpack/*"]
+      "~sass/*": ["sass/*"]
     }
   },
   "exclude": [
