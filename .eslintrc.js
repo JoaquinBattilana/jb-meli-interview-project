@@ -26,7 +26,9 @@ module.exports = {
   ],
   settings: {
     "import/resolver": {
-      "babel-module": {}
+      "babel-module": {
+        "extensions": [".js", ".tsx", ".ts", ".jsx"]
+      }
     }
   },
   rules: {
