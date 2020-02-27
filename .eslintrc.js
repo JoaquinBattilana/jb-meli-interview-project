@@ -22,10 +22,16 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint',
+    '@typescript-eslint'
   ],
+  settings: {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
   rules: {
     'react/jsx-filename-extension': "off",
-    'comma-dangle': "off"
-  },
+    'comma-dangle': "off",
+    'import/extensions': "off"
+  }
 };

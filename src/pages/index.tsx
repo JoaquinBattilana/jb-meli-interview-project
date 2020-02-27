@@ -1,10 +1,9 @@
 import React from 'react';
+import TestComponent from '~components/TestComponent';
 
 function Home() {
   return (
-    <h1>
-      Esto es un test del bootstrap!
-    </h1>
+    <TestComponent />
   );
 }
 
