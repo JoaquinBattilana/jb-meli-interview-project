@@ -1,0 +1,21 @@
+@import 'colors.scss';
+
+.form {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.button {
+  background-color: $athens-gray;
+  border: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.search {
+  border: none;
+  width: 1000px;
+}
