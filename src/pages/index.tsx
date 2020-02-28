@@ -7,4 +7,8 @@ function Home() {
   );
 }
 
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['navbar']
+});
+
 export default Home;

@@ -39,6 +39,7 @@ module.exports = {
     'jsx-a11y/label-has-associated-control': 'off',
     'arrow-parens': ['error', 'as-needed'],
     'no-unused-vars': "off",
-    '@typescript-eslint/no-unused-vars': "error"
+    '@typescript-eslint/no-unused-vars': "error",
+    'max-len': ["error", { "code": 200}]
   }
 };
