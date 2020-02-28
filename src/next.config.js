@@ -6,7 +6,8 @@ module.exports = withImageLoader(
   withSass({
     cssModules: true,
     env: {
-      PORT: process.env.PORT
+      PORT: process.env.PORT,
+      BASE_API_URL: process.env.BASE_API_URL
     },
     sassLoaderOptions: {
       sassOptions: {

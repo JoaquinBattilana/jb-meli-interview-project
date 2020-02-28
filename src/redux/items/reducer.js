@@ -19,10 +19,10 @@ function reducer(state = initialState, action) {
         ...state,
         isLoading: false,
         error: null,
-        items: [...action?.payload?.items],
-        categories: [...action?.payload?.categories]
+        items: action?.payload?.items && [...action.payload.items],
+        categories: action?.payload?.categories && [...action.payload.categories]
       };
-    case actions.LOGIN_FAIL:
+    case actions.GET_ITEMS_FAIL:
       return {
         ...state,
         isLoading: false,
