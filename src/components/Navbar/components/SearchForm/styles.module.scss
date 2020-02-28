@@ -12,6 +12,10 @@
     height: 100%;
     width: 35px;
 
+    &:focus {
+      outline: none;
+    }
+
     .searchButtonImage {
       vertical-align: middle;
       height: 50%;

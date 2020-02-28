@@ -10,7 +10,8 @@
         "~config": "./src/config",
         "~redux": "./src/redux",
         "~scss": "./src/scss",
-        "~types": "./src/types"
+        "~types": "./src/types",
+        "~assets": "./src/public/static/assets"
       }
     }]
   ]

@@ -24,7 +24,8 @@
       "~config/*": ["config/*"],
       "~redux/*": ["redux/*"],
       "~scss/*": ["scss/*"],
-      "~types/*": ["types/*"]
+      "~types/*": ["types/*"],
+      "~assets/*": ["public/static/assets/*"]
     }
   },
   "exclude": [
