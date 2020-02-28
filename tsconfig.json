@@ -19,13 +19,13 @@
     "jsx": "preserve",
     "baseUrl": "." ,
     "paths": {
-      "~components/*": ["components/*"],
-      "~pages/*": ["pages/*"],
-      "~config/*": ["config/*"],
-      "~redux/*": ["redux/*"],
-      "~scss/*": ["scss/*"],
-      "~types/*": ["types/*"],
-      "~assets/*": ["public/static/assets/*"]
+      "~components/*": ["src/components/*"],
+      "~pages/*": ["src/pages/*"],
+      "~config/*": ["src/config/*"],
+      "~redux/*": ["src/redux/*"],
+      "~scss/*": ["src/scss/*"],
+      "~types/*": ["src/types/*"],
+      "~assets/*": ["src/public/static/assets/*"]
     }
   },
   "exclude": [
