@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next ./src -p ${PORT:-3000}",
+    "dev": "node ./src/server.js -p ${PORT:-3000}",
     "build": "next build ./src",
-    "start": "NODE_ENV=production next start ./src -p ${PORT:-3000}",
+    "start": "NODE_ENV=production node ./src/server.js -p ${PORT:-3000}",
     "lint": "eslint src/**/*.tsx src/**/*.js src/**/*.ts"
   },
   "keywords": [],
