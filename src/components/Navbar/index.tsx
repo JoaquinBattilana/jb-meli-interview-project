@@ -17,8 +17,6 @@ function Navbar({ initialSearchValue } : PropTypes) {
     searchField: initialSearchValue
   }), [initialSearchValue]);
 
-  debugger;
-
   return (
     <nav className={styles.navbar}>
       <img
