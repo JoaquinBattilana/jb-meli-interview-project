@@ -1,25 +1,34 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Navbar from '~components/Navbar';
+import ProductList from '~components/ProductList';
 import actionCreators from '~redux/items/actions';
+import styles from './styles.module.scss';
 
 interface PropTypes {
-  searchQuery?: string
+  searchQuery?: string,
+  items: any
 }
 
-function ProductsListView({ searchQuery } : PropTypes) {
+function ProductsListView({ searchQuery, items } : PropTypes) {
   return (
     <>
       <Navbar initialSearchValue={searchQuery} />
-      <p>{process.env.BASE_API_URL}</p>
+      <div className={styles['products-container']}>
+        <ProductList items={items} />
+      </div>
     </>
   );
 }
 
 ProductsListView.getInitialProps = async ({ store, query }) => {
   const searchQuery = query?.search;
-  store.dispatch(actionCreators.getItems(searchQuery));
+  await store.dispatch(actionCreators.getItems(searchQuery));
   return { searchQuery };
 };
 
-export default connect()(ProductsListView);
+const mapStateToProps = store => ({
+  items: store.items.items
+});
+
+export default connect(mapStateToProps)(ProductsListView);
