@@ -6,7 +6,7 @@ interface SearchForm {
   searchField: string
 }
 
-interface PropTypes<> {
+interface PropTypes {
   className: string;
 }
 
