@@ -1,7 +1,19 @@
 import React from 'react';
+import Navbar from '~components/Navbar';
 
-function ProductsListView() {
-  return <h1>Esta es la vista de los items!</h1>;
+interface PropTypes {
+  searchQuery?: string
 }
+
+function ProductsListView({ searchQuery } : PropTypes) {
+  return (
+    <Navbar initialSearchValue={searchQuery} />
+  );
+}
+
+ProductsListView.getInitialProps = ({ query }) => {
+  const searchQuery = query?.search;
+  return { searchQuery };
+};
 
 export default ProductsListView;

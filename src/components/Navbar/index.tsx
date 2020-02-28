@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Router from 'next/router';
 import styles from './styles.module.scss';
 import SearchForm from './components/SearchForm';
 import { SearchFormType } from '~types/formTypes';
 import meliLogoSmall from '~assets/meliLogoSmall.png';
 
-function Navbar() {
+interface PropTypes {
+  initialSearchValue?: string
+}
+
+function Navbar({ initialSearchValue } : PropTypes) {
   const handleSubmit = (values: SearchFormType) => {
-    if (values?.searchField) Router.push(`/items?q=${values.searchField}`);
+    if (values?.searchField) Router.push(`/items?search=${values.searchField}`);
   };
+  const initialValues = useMemo(() => ({
+    searchField: initialSearchValue
+  }), [initialSearchValue]);
+
+  debugger;
 
   return (
     <nav className={styles.navbar}>
@@ -17,7 +26,7 @@ function Navbar() {
         src={meliLogoSmall}
         alt="logo"
       />
-      <SearchForm className={styles['search-form']} onSubmit={handleSubmit} />
+      <SearchForm initialValues={initialValues} className={styles['search-form']} onSubmit={handleSubmit} />
     </nav>
   );
 }
