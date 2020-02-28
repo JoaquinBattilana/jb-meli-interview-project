@@ -4,23 +4,39 @@
 .form {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 100%;
+
+  .submit-button {
+    background-color: white;
+    border: none;
+    height: 100%;
+    width: 35px;
+
+    .searchButtonImage {
+      vertical-align: middle;
+      height: 50%;
+    }
+  }
+
+  .search {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
-.button {
-  background-color: $athens-gray;
-  border: none;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.search {
-  border: none;
-  height: 100%;
-}
-
-.searchButton {
-  height: 100%;
+@media only screen and (min-width: $medium-device) {
+  .form {
+    width: 60%;
+    
+    .submit-button {
+      order: 1;
+      background-color: $athens-gray;
+    }
+  }
 }

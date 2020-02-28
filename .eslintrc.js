@@ -36,6 +36,7 @@ module.exports = {
     'comma-dangle': 'off',
     'import/extensions': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'jsx-a11y/label-has-associated-control': 'off'
+    'jsx-a11y/label-has-associated-control': 'off',
+    'arrow-parens': ['error', 'as-needed']
   }
 };

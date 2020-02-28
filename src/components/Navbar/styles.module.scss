@@ -1,7 +1,8 @@
 @import 'colors.scss';
 @import 'variables.scss';
 
-.navbarstyle {
+.navbar {
+  box-sizing: border-box;
   align-items: center;
   display: flex;
   justify-content: flex-start;
@@ -15,8 +16,19 @@
     height: $navbar-items-height;
   }
 
-  .form {
+  .search-form {
     height: $navbar-items-height;
     margin: 0 5px;
+    width: 100%
+  }
+}
+
+@media only screen and (min-width: $medium-device) {
+  .navbar {
+    justify-content: center;
+
+    .search-form {
+      width: 60%;
+    }
   }
 }
