@@ -1,5 +1,5 @@
 import React from 'react';
-import Router from 'next/router'
+import Router from 'next/router';
 import styles from './styles.module.scss';
 import SearchForm from './components/SearchForm';
 

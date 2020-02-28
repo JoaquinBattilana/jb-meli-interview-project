@@ -1,8 +1,16 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, InjectedFormProps } from 'redux-form';
 import styles from './styles.module.scss';
 
-function SearchForm({ handleSubmit, className }) {
+interface SearchForm {
+  searchField: string
+}
+
+interface PropTypes<> {
+  className: string;
+}
+
+function SearchForm({ handleSubmit, className } : PropTypes & InjectedFormProps<SearchForm>) {
   return (
     <form onSubmit={handleSubmit} className={`${className} ${styles.form}`}>
       <button type="submit" className={styles['submit-button']}>
@@ -12,6 +20,10 @@ function SearchForm({ handleSubmit, className }) {
     </form>
   );
 }
+
+SearchForm.defaultProps = {
+  className: ''
+};
 
 export default reduxForm({
   form: 'searchForm'
