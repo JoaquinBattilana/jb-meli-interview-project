@@ -16,7 +16,10 @@ const actionsCreators = {
         payload: response.data
       });
     } else {
-      dispatch({ type: actions.LOGIN_FAIL });
+      dispatch({
+        type: actions.LOGIN_FAIL,
+        payload: response.error
+      });
     }
   }
 };
