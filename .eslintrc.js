@@ -35,6 +35,11 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'comma-dangle': 'off',
     'import/extensions': 'off',
-    'react/jsx-props-no-spreading': 'off'
+    'react/jsx-props-no-spreading': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'arrow-parens': ['error', 'as-needed'],
+    'no-unused-vars': "off",
+    '@typescript-eslint/no-unused-vars': "error",
+    'max-len': ["error", { "code": 200}]
   }
 };

@@ -1,0 +1,50 @@
+@import 'colors.scss';
+@import 'variables.scss';
+
+.form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .submit-button {
+    background-color: white;
+    border: none;
+    height: 100%;
+    width: 35px;
+
+    &:focus {
+      outline: none;
+    }
+
+    .searchButtonImage {
+      vertical-align: middle;
+      height: 50%;
+    }
+  }
+
+  .search {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-device) {
+  .form {
+    width: 60%;
+    
+    .submit-button {
+      order: 1;
+      background-color: $athens-gray;
+    }
+  }
+}

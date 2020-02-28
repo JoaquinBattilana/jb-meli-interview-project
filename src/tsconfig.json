@@ -19,9 +19,13 @@
     "jsx": "preserve",
     "baseUrl": "." ,
     "paths": {
-      "~components/*": ["components/*"],
-      "~pages/*": ["pages/*"],
-      "~config/*": ["config/*"]
+      "~components/*": ["./components/*"],
+      "~pages/*": ["./pages/*"],
+      "~config/*": ["./config/*"],
+      "~redux/*": ["./redux/*"],
+      "~scss/*": ["./scss/*"],
+      "~types/*": ["./types/*"],
+      "~assets/*": ["./public/static/assets/*"]
     }
   },
   "exclude": [
