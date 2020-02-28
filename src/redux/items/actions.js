@@ -13,12 +13,12 @@ const actionsCreators = {
     if (response.ok) {
       dispatch({
         type: actions.LOGIN_SUCESS,
-        payload: response.data
+        payload: response?.data
       });
     } else {
       dispatch({
         type: actions.LOGIN_FAIL,
-        payload: response.error
+        payload: response?.error
       });
     }
   }

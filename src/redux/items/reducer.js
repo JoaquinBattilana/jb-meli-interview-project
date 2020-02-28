@@ -3,7 +3,8 @@ import { actions } from './actions';
 const initialState = {
   isLoading: false,
   error: null,
-  items: []
+  items: [],
+  categories: []
 };
 
 function reducer(state = initialState, action) {
@@ -18,13 +19,14 @@ function reducer(state = initialState, action) {
         ...state,
         isLoading: false,
         error: null,
-        items: [...action.payload]
+        items: [...action?.payload?.items],
+        categories: [...action?.payload?.categories]
       };
     case actions.LOGIN_FAIL:
       return {
         ...state,
         isLoading: false,
-        error: action.payload
+        error: action?.payload
       };
     default:
       return state;
