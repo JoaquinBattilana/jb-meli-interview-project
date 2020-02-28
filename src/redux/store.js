@@ -6,9 +6,11 @@ import {
 } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import thunk from 'redux-thunk';
+import items from './items/reducer';
 
 const rootReducer = combineReducers({
-  form: formReducer
+  form: formReducer,
+  items
 });
 
 const enhancers = [applyMiddleware(thunk)];
