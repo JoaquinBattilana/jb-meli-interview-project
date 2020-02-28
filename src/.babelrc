@@ -11,7 +11,8 @@
         "~redux": "./src/redux",
         "~scss": "./src/scss",
         "~types": "./src/types",
-        "~assets": "./src/public/static/assets"
+        "~assets": "./src/public/static/assets",
+        "~services": "./src/services"
       }
     }]
   ]
