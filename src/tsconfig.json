@@ -23,7 +23,8 @@
       "~pages/*": ["pages/*"],
       "~config/*": ["config/*"],
       "~redux/*": ["redux/*"],
-      "~scss/*": ["scss/*"]
+      "~scss/*": ["scss/*"],
+      "~types/*": ["types/*"]
     }
   },
   "exclude": [
