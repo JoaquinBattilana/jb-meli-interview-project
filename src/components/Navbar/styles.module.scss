@@ -1,18 +1,22 @@
 @import 'colors.scss';
+@import 'variables.scss';
 
 .navbarstyle {
-  background-color: $gorse;
-  height: 50px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  background-color: $gorse;
+  height: $navbar-height;
+  padding: 0 10px;
+  width: 100%;
+  border-bottom: 1px solid $athens-gray;
 
   .logo {
-    height: 30px;
-    margin: 0 5px;
+    height: $navbar-items-height;
   }
 
   .form {
+    height: $navbar-items-height;
     margin: 0 5px;
   }
 }

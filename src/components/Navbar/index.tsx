@@ -7,7 +7,7 @@ function Navbar() {
     <nav className={styles.navbarstyle}>
       <img
         className={styles.logo}
-        src="https://http2.mlstatic.com/ui/navigation/5.3.7/mercadolibre/logo__small@2x.png"
+        src="static/assets/meli_logo_navbar.png"
         alt="logo"
       />
       <SearchForm className={styles.form} />

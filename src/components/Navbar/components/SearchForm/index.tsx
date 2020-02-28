@@ -7,7 +7,7 @@ function SearchForm({ handleSubmit, className }) {
     <form onSubmit={handleSubmit} className={`${className} ${styles.form}`}>
       <Field name="searchField" component="input" className={styles.search} />
       <button type="submit" className={styles.button}>
-        <img src=""/>
+        <img alt="search" src="static/assets/glass.png" className={styles.searchButton} />
       </button>
     </form>
   );

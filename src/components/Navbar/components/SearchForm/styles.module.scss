@@ -1,9 +1,10 @@
 @import 'colors.scss';
+@import 'variables.scss';
 
 .form {
   display: flex;
   align-items: center;
-  max-width: 1000px;
+  width: 80%;
 }
 
 .button {
@@ -17,5 +18,9 @@
 
 .search {
   border: none;
-  width: 1000px;
+  height: 100%;
+}
+
+.searchButton {
+  height: 100%;
 }
