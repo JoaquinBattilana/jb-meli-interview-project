@@ -1,7 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import actionCreators from '~redux/items/actions';
 
-function ProductView() {
-  return <h1>Esta es la vista del producto en particular!</h1>;
+function ProductView({ currentItem }) {
+  console.log(currentItem);
+  return null;
 }
 
-export default ProductView;
+ProductView.getInitialProps = async ({ store, query }) => {
+  const id = query?.id;
+  await store.dispatch(actionCreators.getItemById(id));
+  return { nameSpaceRequired: [] };
+};
+
+const mapStateToProps = state => ({
+  currentItem: state.currentItem
+});
+
+export default connect(mapStateToProps)(ProductView);
