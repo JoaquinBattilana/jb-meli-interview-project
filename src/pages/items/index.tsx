@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Navbar from '~components/Navbar';
 import ProductList from '~components/ProductList';
 import Breadcrumb from '~components/Breadcrumb';
+import Layout from '~components/Layout';
 import actionCreators from '~redux/items/actions';
 import styles from './styles.module.scss';
 
@@ -14,20 +14,17 @@ interface PropTypes {
 
 function ProductsListView({ searchQuery, items, categories } : PropTypes) {
   return (
-    <>
-      <Navbar initialSearchValue={searchQuery} />
-      <div className={styles['products-container']}>
-        <Breadcrumb categories={categories} />
-        <ProductList items={items} />
-      </div>
-    </>
+    <Layout searchQuery={searchQuery}>
+      <Breadcrumb categories={categories} />
+      <ProductList items={items} />
+    </Layout>
   );
 }
 
 ProductsListView.getInitialProps = async ({ store, query }) => {
   const searchQuery = query?.search;
   await store.dispatch(actionCreators.getItems(searchQuery));
-  return { searchQuery };
+  return { searchQuery, nameSpaceRequired: [] };
 };
 
 const mapStateToProps = store => ({

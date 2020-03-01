@@ -1,10 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import actionCreators from '~redux/items/actions';
+import Breadcrumb from '~components/Breadcrumb';
+import Layout from '~components/Layout';
+import Product from '~components/Product';
 
-function ProductView({ currentItem }) {
-  console.log(currentItem);
-  return null;
+interface PropTypes {
+  currentItem: any,
+  categories: string[]
+}
+
+function ProductView({ currentItem, categories } : PropTypes) {
+  return (
+    <Layout>
+      <Breadcrumb categories={categories} />
+      <Product product={currentItem} />
+    </Layout>
+  );
 }
 
 ProductView.getInitialProps = async ({ store, query }) => {
@@ -14,7 +26,8 @@ ProductView.getInitialProps = async ({ store, query }) => {
 };
 
 const mapStateToProps = state => ({
-  currentItem: state.currentItem
+  currentItem: state.items.currentItem,
+  categories: state.items.categories
 });
 
 export default connect(mapStateToProps)(ProductView);

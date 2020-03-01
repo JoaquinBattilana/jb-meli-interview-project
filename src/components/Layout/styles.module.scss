@@ -1,13 +1,12 @@
-@import 'colors.scss';
 @import 'variables.scss';
 
-.products-container {
+.layout-container {
   padding-top: 20px;
   width: 100%;
 }
-
+  
 @media only screen and (min-width: $medium-device) {
-  .products-container {
+  .layout-container {
     margin: auto;
     width: 70%;
   }

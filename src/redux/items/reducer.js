@@ -39,7 +39,8 @@ function reducer(state = initialState, action) {
         ...state,
         itemLoading: false,
         itemError: null,
-        currentItem: { ...action.payload }
+        currentItem: { ...action?.payload?.item },
+        categories: action?.payload?.item?.categories
       };
     case actions.GET_ITEM_BY_ID_FAIL:
       return {
