@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import Link from 'next/link';
 
 interface PropTypes {
   id: number,
@@ -11,7 +12,7 @@ interface PropTypes {
   },
   decimals: number,
   condition: string,
-  free_shipping: boolean,
+  freeShipping: boolean,
   picture: string
 }
 
@@ -20,14 +21,16 @@ function ProductList({
   title,
   price,
   condition,
-  free_shipping,
+  freeShipping,
   picture
 } : PropTypes) {
   return (
-    <div className={styles['product-container']}>
-      <img src={picture} />
-      <h2>{title}</h2>
-    </div>
+    <Link href="items/[id]" as={`/items/${id}`}>
+      <div className={styles['product-container']}>
+        <img src={picture} />
+        <h2>{title}</h2>
+      </div>
+    </Link>
   );
 }
 
