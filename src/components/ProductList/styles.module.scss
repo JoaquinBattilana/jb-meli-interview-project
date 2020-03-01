@@ -1,4 +1,13 @@
+@import 'variables.scss';
+
 .products-list {
   display: flex;
   flex-direction: column;
+
+}
+@media only screen and (min-width: $medium-device) {
+  .products-list {
+    margin: auto;
+    width: 70%;
+  }
 }

@@ -3,27 +3,49 @@
 .product-container {
   padding: 10px;
   display: flex;
-  height: 150px;
+  min-height: 120px;
   border-bottom: 1px solid $athens-gray;
   background-color: white;
 
-  .product-image {
-    height: auto;
+  .image-container {
+    display: flex;
+    vertical-align: middle;
+    margin-right: 15px;
+    max-width: 100px;
     width: 100%;
+
+    .product-image {
+      align-self: center;
+      width: 100%;
+    }
   }
 
-  .product-title {
-    font-size: 15px;
-    font-weight: normal;
-  }
+  .description-container {
+    padding: 15px 15px 0 20px;
 
-  .free-shipping-dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: green;
-    display: inline-block;
-    box-shadow: 0 0 3px 2px green;
+    .price-container {
+      font-size: 20px;
+      font-weight: 400;
+
+      .price-symbol {
+        margin-right: 5px;
+      }
+    }
+
+    .product-title {
+      font-size: 15px;
+      font-weight: lighter;
+    }
+  
+    .free-shipping-dot {
+      margin-left: 5px;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: green;
+      display: inline-block;
+      box-shadow: 0 0 3px 2px green;
+    }
   }
 
   &:last-child {
