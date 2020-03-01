@@ -1,0 +1,14 @@
+@import 'colors.scss';
+@import 'variables.scss';
+
+.products-container {
+  padding-top: 20px;
+  width: 100%;
+}
+
+@media only screen and (min-width: $medium-device) {
+  .products-container {
+    margin: auto;
+    width: 70%;
+  }
+}

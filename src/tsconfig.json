@@ -25,7 +25,8 @@
       "~redux/*": ["./redux/*"],
       "~scss/*": ["./scss/*"],
       "~types/*": ["./types/*"],
-      "~assets/*": ["./public/static/assets/*"]
+      "~assets/*": ["./public/static/assets/*"],
+      "~services/*": ["./services/*"]
     }
   },
   "exclude": [
