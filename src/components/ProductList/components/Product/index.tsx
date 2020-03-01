@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import getSymbolFromCurrency from 'currency-symbol-map';
 import Link from 'next/link';
+import styles from './styles.module.scss';
 
 interface PropTypes {
   id: number,
@@ -26,10 +27,16 @@ function ProductList({
 } : PropTypes) {
   return (
     <Link href="items/[id]" as={`/items/${id}`}>
-      <div className={styles['product-container']}>
-        <img src={picture} />
-        <h2>{title}</h2>
-      </div>
+      <li className={styles['product-container']}>
+        <img src={picture} alt="product" className={styles['product-image']} />
+        <div>
+          <span>{getSymbolFromCurrency(price.currency)}</span>
+          <span>{price.amount}</span>
+          <sup>{price.decimals ? price.decimals : '00'}</sup>
+          {freeShipping && <span className={styles['free-shipping-dot']} />}
+        </div>
+        <h2 className={styles['product-title']}>{title}</h2>
+      </li>
     </Link>
   );
 }

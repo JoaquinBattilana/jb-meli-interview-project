@@ -8,9 +8,9 @@ interface PropTypes {
 
 function ProductList({ items } : any) {
   return (
-    <div className={styles['products-list']}>
+    <ul className={styles['products-list']}>
       {items.map(item => <Product key={item.id} {...item} />)}
-    </div>
+    </ul>
   );
 }
 
