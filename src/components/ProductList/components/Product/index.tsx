@@ -21,7 +21,6 @@ function ProductList({
   id,
   title,
   price,
-  condition,
   freeShipping,
   picture
 } : PropTypes) {
