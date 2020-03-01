@@ -1,9 +1,10 @@
 import React from 'react';
+import { ProductListType } from '~types/reduxTypes';
 import Product from './components/Product';
 import styles from './styles.module.scss';
 
 interface PropTypes {
-  items: any
+  items: ProductListType
 }
 
 function ProductList({ items } : any) {

@@ -14,7 +14,7 @@ function ProductView({ currentItem, categories } : PropTypes) {
   return (
     <Layout>
       <Breadcrumb categories={categories} />
-      <Product product={currentItem} />
+      <Product {...currentItem} />
     </Layout>
   );
 }
