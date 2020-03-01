@@ -11,9 +11,9 @@ function Layout({ children, searchQuery } : PropTypes) {
   return (
     <>
       <Navbar initialSearchValue={searchQuery} />
-      <div className={styles['layout-container']}>
+      <main className={styles['layout-container']}>
         {children}
-      </div>
+      </main>
     </>
   );
 }

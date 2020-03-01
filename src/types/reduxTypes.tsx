@@ -12,7 +12,7 @@ export interface ProductListType {
   picture: string
 }
 
-export interface productDetailType extends ProductListType {
+export interface ProductDetailType extends ProductListType {
   soldQuantity: number,
   description: string
 }

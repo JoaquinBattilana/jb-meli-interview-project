@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.product-container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "image"
+    "data"
+    "description";
+  
+  .product-image {
+    width: 100%;
+    grid-area: image;
+  }
+
+  .product-data-container {
+    grid-area: data;
+
+  }
+
+  .product-description-container {
+    grid-area: description;
+  }
+}
+
+@media only screen and (min-width: $medium-device) {
+  .product-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "image image data"
+      "description description description";
+  }
+}

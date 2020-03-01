@@ -4,7 +4,6 @@ import ProductList from '~components/ProductList';
 import Breadcrumb from '~components/Breadcrumb';
 import Layout from '~components/Layout';
 import actionCreators from '~redux/items/actions';
-import styles from './styles.module.scss';
 
 interface PropTypes {
   searchQuery?: string,
