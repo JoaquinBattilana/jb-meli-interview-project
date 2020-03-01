@@ -1,10 +1,11 @@
 import { actions } from './actions';
 
 const initialState = {
-  isLoading: false,
-  error: null,
+  itemsLoading: false,
+  itemsError: null,
   items: [],
-  categories: []
+  categories: [],
+  currentItem: {}
 };
 
 function reducer(state = initialState, action) {
@@ -12,21 +13,39 @@ function reducer(state = initialState, action) {
     case actions.GET_ITEMS:
       return {
         ...state,
-        isLoading: true
+        itemsLoading: true
       };
     case actions.GET_ITEMS_SUCESS:
       return {
         ...state,
-        isLoading: false,
-        error: null,
+        itemsLoading: false,
+        itemsError: null,
         items: action?.payload?.items && [...action.payload.items],
         categories: action?.payload?.categories && [...action.payload.categories]
       };
     case actions.GET_ITEMS_FAIL:
       return {
         ...state,
-        isLoading: false,
-        error: action?.payload
+        itemsLoading: false,
+        itemsError: action?.payload
+      };
+    case actions.GET_ITEM_BY_ID:
+      return {
+        ...state,
+        itemLoading: true
+      };
+    case actions.GET_ITEM_BY_ID_SUCESS:
+      return {
+        ...state,
+        itemLoading: false,
+        itemError: null,
+        currentItem: { ...action.payload }
+      };
+    case actions.GET_ITEM_BY_ID_FAIL:
+      return {
+        ...state,
+        itemLoading: false,
+        itemError: action?.payload
       };
     default:
       return state;
