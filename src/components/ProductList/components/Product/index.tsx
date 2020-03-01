@@ -1,8 +1,8 @@
 import React from 'react';
-import getSymbolFromCurrency from 'currency-symbol-map';
 import Link from 'next/link';
 import styles from './styles.module.scss';
 import { ProductListType } from '~types/reduxTypes';
+import Price from '~components/Price';
 
 function ProductList({
   id,
@@ -18,10 +18,7 @@ function ProductList({
           <img src={picture} alt="product" className={styles['product-image']} />
         </div>
         <div className={styles['description-container']}>
-          <div className={styles['price-container']}>
-            <span className={styles['price-symbol']}>{getSymbolFromCurrency(price.currency)}</span>
-            <span>{price?.decimals ? (price?.amount + 1).toLocaleString('de') : price.amount}</span>
-          </div>
+          <Price {...price} round size="medium" />
           {freeShipping && <span className={styles['free-shipping-dot']} />}
           <h2 className={styles['product-title']}>{title}</h2>
         </div>

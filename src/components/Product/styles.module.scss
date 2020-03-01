@@ -19,10 +19,18 @@
   .product-data-container {
     grid-area: data;
 
+    .product-title {
+      font-size: 20px;
+    }
   }
 
   .product-description-container {
     grid-area: description;
+
+    .product-description-text {
+      white-space: pre-line;
+      font-weight: lighter;
+    }
   }
 }
 
