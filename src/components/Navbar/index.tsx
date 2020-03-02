@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import Router from 'next/router';
+import Link from 'next/link';
 import styles from './styles.module.scss';
 import SearchForm from './components/SearchForm';
 import { SearchFormType } from '~types/formTypes';
@@ -19,11 +20,15 @@ function Navbar({ initialSearchValue } : PropTypes) {
 
   return (
     <nav className={styles.navbar}>
-      <img
-        className={styles.logo}
-        src={meliLogoSmall}
-        alt="logo"
-      />
+      <Link href="/">
+        <a>
+          <img
+            className={styles.logo}
+            src={meliLogoSmall}
+            alt="logo"
+          />
+        </a>
+      </Link>
       <SearchForm initialValues={initialValues} className={styles['search-form']} onSubmit={handleSubmit} />
     </nav>
   );
