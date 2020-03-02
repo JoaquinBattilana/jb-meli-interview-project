@@ -20,7 +20,7 @@ function Price({
   const price = round && decimals ? amount + 1 : amount;
   return (
     <div className={styles[`price-${size}`]}>
-      <span>{getSymbolFromCurrency(currency)}</span>
+      <span className={styles.symbol}>{getSymbolFromCurrency(currency)}</span>
       <span>{price.toLocaleString('de')}</span>
       {!round && <sup>{decimals || '00'}</sup>}
     </div>

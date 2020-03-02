@@ -23,7 +23,7 @@ function ProductsListView({ searchQuery, items, categories } : PropTypes) {
 ProductsListView.getInitialProps = async ({ store, query }) => {
   const searchQuery = query?.search;
   await store.dispatch(actionCreators.getItems(searchQuery));
-  return { searchQuery, nameSpaceRequired: [] };
+  return { searchQuery, nameSpaceRequired: ['product'] };
 };
 
 const mapStateToProps = store => ({
