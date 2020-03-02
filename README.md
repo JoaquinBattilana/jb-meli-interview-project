@@ -50,6 +50,16 @@ Ya tenemos el servidor corriendo y podemos entrar a `localhost:${PORT}` para ver
 # Api
 Para este proyecto vamos a usar [ESTA](https://github.com/JoaquinBattilana/jb-meli-api) api, la cual es un wrapper de la api de mercadolibre. En el respositorio se puede ver las especificaciones y como ejecutarla, tambièn se puede usar la api que esta deployada en la nube la cual esta en la parte deployments del repo.
 
+# CI/CD
+
+Las justificaciones de usar Travis + Heroku son las mismas que hay dentro de la api definida arriba ( ver README.md de api ).
+
+# Ambientes
+
+Actualmente tenemos un solo ambiente el cual esta deployado en modo produccion para poder ver los cambios.
+[LINK AL AMBIENTE](https://jb-meli-frontend.herokuapp.com)
+Recordar que es posible que al estar hosteado en heroku la app se duerma y tarde la primera vez que se ingresa.
+
 # Decisiones de desarrollo
 
 ## Framework
