@@ -4,10 +4,10 @@ import Product from './components/Product';
 import styles from './styles.module.scss';
 
 interface PropTypes {
-  items: ProductListType
+  items: ProductListType[]
 }
 
-function ProductList({ items } : any) {
+function ProductList({ items } : PropTypes) {
   return (
     <ul className={styles['products-list']}>
       {items?.map(item => <Product key={item.id} {...item} />)}

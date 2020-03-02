@@ -4,30 +4,42 @@ import ProductList from '~components/ProductList';
 import Breadcrumb from '~components/Breadcrumb';
 import Layout from '~components/Layout';
 import actionCreators from '~redux/items/actions';
+import { ProductListType } from '~types/reduxTypes';
+import Loading from '~components/Loading';
 
 interface PropTypes {
   searchQuery?: string,
   categories: string[],
-  items: any
+  items: ProductListType[],
+  itemsLoading: boolean
 }
 
-function ProductsListView({ searchQuery, items, categories } : PropTypes) {
+function ProductsListView({
+  searchQuery,
+  items,
+  categories,
+  itemsLoading
+} : PropTypes) {
   return (
     <Layout searchQuery={searchQuery}>
-      <Breadcrumb categories={categories} />
-      <ProductList items={items} />
+      <Loading isLoading={itemsLoading}>
+        <Breadcrumb categories={categories} />
+        <ProductList items={items} />
+      </Loading>
     </Layout>
   );
 }
 
-ProductsListView.getInitialProps = async ({ store, query }) => {
+ProductsListView.getInitialProps = async ({ store, query, req }) => {
   const searchQuery = query?.search;
-  await store.dispatch(actionCreators.getItems(searchQuery));
+  if (req) await store.dispatch(actionCreators.getItems(searchQuery));
+  else { store.dispatch(actionCreators.getItems(searchQuery)); }
   return { searchQuery, nameSpaceRequired: ['product'] };
 };
 
 const mapStateToProps = store => ({
   items: store.items.items,
+  itemsLoading: store.items.itemsLoading,
   categories: store.items.categories
 });
 

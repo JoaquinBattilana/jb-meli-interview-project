@@ -18,8 +18,10 @@ function ProductList({
           <img src={picture} alt="product" className={styles['product-image']} />
         </div>
         <div className={styles['description-container']}>
-          <Price {...price} round size="medium" />
-          {freeShipping && <span className={styles['free-shipping-dot']} />}
+          <div className={styles['row-container']}>
+            <Price {...price} round size="medium" />
+            {freeShipping && <span className={styles['free-shipping-dot']} />}
+          </div>
           <h2 className={styles['product-title']}>{title}</h2>
         </div>
       </li>

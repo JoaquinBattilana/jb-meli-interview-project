@@ -13,8 +13,10 @@
     "description";
   
   .product-image {
-    width: 100%;
+    align-self: center;
+    justify-self: center;
     grid-area: image;
+    max-width: 100%;
   }
 
   .product-condition {
@@ -23,6 +25,7 @@
 
   .product-data-container {
     grid-area: data;
+    margin-left: 20px;
 
     .product-title {
       font-size: 20px;
