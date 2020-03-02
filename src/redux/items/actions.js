@@ -36,7 +36,7 @@ const actionsCreators = {
     } else {
       dispatch({
         type: actions.GET_ITEM_BY_ID_FAIL,
-        payload: response?.error
+        payload: response?.data
       });
     }
   }

@@ -5,7 +5,9 @@ const initialState = {
   itemsError: null,
   items: [],
   categories: [],
-  currentItem: {}
+  currentItem: {},
+  itemLoading: false,
+  itemError: null
 };
 
 function reducer(state = initialState, action) {

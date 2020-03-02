@@ -1,4 +1,11 @@
 .products-list {
   display: flex;
   flex-direction: column;
+
+  .empty-results {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+  }
 }

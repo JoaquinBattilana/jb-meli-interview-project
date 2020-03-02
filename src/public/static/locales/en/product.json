@@ -4,5 +4,6 @@
   "product_description_title": "Product description",
   "product_buy_button": "Buy",
   "product_alt_image": "Product",
-  "product_quantity_sold": "{{n}} sold"
+  "product_quantity_sold": "{{n}} sold",
+  "product_error": "Woops, the product you're looking for does not exist"
 }
