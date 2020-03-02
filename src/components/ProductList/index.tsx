@@ -10,7 +10,7 @@ interface PropTypes {
 function ProductList({ items } : any) {
   return (
     <ul className={styles['products-list']}>
-      {items.map(item => <Product key={item.id} {...item} />)}
+      {items?.map(item => <Product key={item.id} {...item} />)}
     </ul>
   );
 }
