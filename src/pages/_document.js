@@ -12,9 +12,7 @@ class MyDocument extends Document {
     const { language } = this.props;
     return (
       <html lang={language}>
-        <Head>
-          <title>Mercado Libre</title>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

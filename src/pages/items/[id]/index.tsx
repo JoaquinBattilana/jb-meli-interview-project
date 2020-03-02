@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Head from 'next/head';
 import actionCreators from '~redux/items/actions';
 import Breadcrumb from '~components/Breadcrumb';
 import Layout from '~components/Layout';
@@ -14,12 +15,19 @@ interface PropTypes {
 
 function ProductView({ currentItem, categories, itemLoading } : PropTypes) {
   return (
-    <Layout>
-      <Loading isLoading={itemLoading}>
-        <Breadcrumb categories={categories} />
-        <Product {...currentItem} />
-      </Loading>
-    </Layout>
+    <>
+      { currentItem?.title && (
+        <Head>
+          <title key="product-head">{currentItem.title}</title>
+        </Head>
+      )}
+      <Layout>
+        <Loading isLoading={itemLoading}>
+          <Breadcrumb categories={categories} />
+          <Product {...currentItem} />
+        </Loading>
+      </Layout>
+    </>
   );
 }
 

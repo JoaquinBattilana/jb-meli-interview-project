@@ -2,6 +2,7 @@ import React from 'react';
 import App from 'next/app';
 import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
+import Head from 'next/head';
 import { appWithTranslation } from '~config/i18n';
 import createStore from '~redux/store';
 import '~scss/application.scss';
@@ -15,9 +16,14 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, store } = this.props;
     return (
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+      <>
+        <Head key="generic title">
+          <title>Mercado Libre</title>
+        </Head>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </>
     );
   }
 }
