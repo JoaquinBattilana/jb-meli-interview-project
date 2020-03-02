@@ -47,6 +47,9 @@ npm start
 ```
 Ya tenemos el servidor corriendo y podemos entrar a `localhost:${PORT}` para ver nuestra página.
 
+# Api
+Para este proyecto vamos a usar [ESTA](https://github.com/JoaquinBattilana/jb-meli-api) api, la cual es un wrapper de la api de mercadolibre. En el respositorio se puede ver las especificaciones y como ejecutarla, tambièn se puede usar la api que esta deployada en la nube la cual esta en la parte deployments del repo.
+
 # Decisiones de desarrollo
 
 ## Framework
