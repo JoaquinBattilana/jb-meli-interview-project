@@ -15,8 +15,8 @@
   .product-image {
     align-self: center;
     justify-self: center;
-    max-height: 400px;
     grid-area: image;
+    max-width: 100%;
   }
 
   .product-condition {
@@ -60,10 +60,6 @@
     grid-template-areas:
       "image image data"
       "description description description";
-
-    .product-image {
-      max-height: 500px;
-    }
 
     .product-data-container {
   
