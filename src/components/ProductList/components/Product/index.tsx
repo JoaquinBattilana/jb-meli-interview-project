@@ -9,7 +9,8 @@ function ProductList({
   title,
   price,
   freeShipping,
-  picture
+  picture,
+  state
 } : ProductListType) {
   return (
     <Link href="items/[id]" as={`/items/${id}`}>
@@ -22,6 +23,7 @@ function ProductList({
             <Price {...price} round size="medium" />
             {freeShipping && <span className={styles['free-shipping-dot']} />}
           </div>
+          <span className={styles['product-state']}>{state}</span>
           <h2 className={styles['product-title']}>{title}</h2>
         </div>
       </li>

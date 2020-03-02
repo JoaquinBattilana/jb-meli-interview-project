@@ -9,7 +9,8 @@ export interface ProductListType {
   decimals: number,
   condition: string,
   freeShipping: boolean,
-  picture: string
+  picture: string,
+  state: string
 }
 
 export interface ProductDetailType extends ProductListType {

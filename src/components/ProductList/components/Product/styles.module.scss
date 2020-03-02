@@ -1,4 +1,5 @@
 @import 'colors.scss';
+@import 'variables.scss';
 
 .product-container {
   background-color: white;
@@ -22,11 +23,19 @@
   }
 
   .description-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     padding: 15px 15px 0 20px;
 
     .row-container {
       align-items: center;
       display: flex;
+    }
+
+    .product-state {
+      font-size: 10px;
+      margin-top: 5px;
     }
 
     .product-title {
@@ -46,5 +55,22 @@
 
   &:last-child {
     border-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: $medium-device) {
+  .product-container {
+    min-height: 150px;
+
+    .image-container  {
+      max-width: 150px;
+    }
+
+    .description-container {
+      
+      .product-state {
+        margin-left: auto;
+      }
+    }
   }
 }
