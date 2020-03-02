@@ -47,6 +47,19 @@ npm start
 ```
 Ya tenemos el servidor corriendo y podemos entrar a `localhost:${PORT}` para ver nuestra página.
 
+# Api
+Para este proyecto vamos a usar [ESTA](https://github.com/JoaquinBattilana/jb-meli-api) api, la cual es un wrapper de la api de mercadolibre. En el respositorio se puede ver las especificaciones y como ejecutarla, tambièn se puede usar la api que esta deployada en la nube la cual esta en la parte deployments del repo.
+
+# CI/CD
+
+Las justificaciones de usar Travis + Heroku son las mismas que hay dentro de la api definida arriba ( ver README.md de api ).
+
+# Ambientes
+
+Actualmente tenemos un solo ambiente el cual esta deployado en modo produccion para poder ver los cambios.
+[LINK AL AMBIENTE](https://jb-meli-frontend.herokuapp.com)
+Recordar que es posible que al estar hosteado en heroku la app se duerma y tarde la primera vez que se ingresa.
+
 # Decisiones de desarrollo
 
 ## Framework
@@ -71,3 +84,28 @@ Al igual que redux era totalmente innecesario ya que el form de la aplicación e
 Se decidió usar SASS debido a todas las mejoras que trae en contra de CSS, como los Mixins, nesteo de clases o declaración de variables, esto nos hace que sea más escalable el código y se vea más prolijo.
 ### Fonts
 Al no haber un requerimiento de fonts se decidió usar el stack system para que la aplicación sea más performante debido a que no necesita ir a buscar fonts remotamente.
+### Schema org
+Por la misma razon que el SSR se decidio aplicar schema org para que google sepa bien como se define nuestra data ya que la aplicacion es sobre ventas y es importantisimo que nuestra data sea bien indexada, por ser un ejercicio solo se aplico a la vista de producto y puede ser vista en [ESTE](https://search.google.com/structured-data/testing-tool/u/0/#url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com%2Fitems%2FMLA793241006) ejemplo. Si bien hay muchos warnings es porque no tenemos la informacion necesaria, pero las propiedades obligatorias estan.
+
+# Google insights
+
+### Vista del buscador
+https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com
+### Vista del listado de productos
+https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com%2Fitems%3Fsearch%3Dmate
+### Vista de un producto particular
+https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com%2Fitems%2FMLA831793840
+
+Como podemos ver, en los ejemplos de las vistas los puntajes dan mayormente altos, siendo uno de los mayores problemas un script de heroku.
+
+# Nice to have
+
+Aca va una lista de cosas que me gustaria haber implementado e irian perfecto con el flujo de la aplicacion:
+
+- Testing con jest + enzyme
+- PWA
+- sitemap
+- historial de busquedas con localStorage
+- Typescript en toda la aplicacion
+- Clases globales para estilos
+
