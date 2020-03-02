@@ -108,4 +108,6 @@ Aca va una lista de cosas que me gustaria haber implementado e irian perfecto co
 - historial de busquedas con localStorage
 - Typescript en toda la aplicacion
 - Clases globales para estilos
+- Home landing
+- Mejores pantallas de errores
 
