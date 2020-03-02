@@ -27,7 +27,8 @@
       "~types/*": ["./types/*"],
       "~assets/*": ["./public/static/assets/*"],
       "~services/*": ["./services/*"],
-      "~constants/*": ["./constants/*"]
+      "~constants/*": ["./constants/*"],
+      "~utils/*": ["./utils/*"]
     }
   },
   "exclude": [

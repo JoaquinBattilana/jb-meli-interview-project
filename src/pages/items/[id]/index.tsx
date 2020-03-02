@@ -6,6 +6,7 @@ import Breadcrumb from '~components/Breadcrumb';
 import Layout from '~components/Layout';
 import Product from '~components/Product';
 import Loading from '~components/Loading';
+import { generateProductSchema } from '~utils/schema';
 
 interface PropTypes {
   currentItem: any,
@@ -14,11 +15,16 @@ interface PropTypes {
 }
 
 function ProductView({ currentItem, categories, itemLoading } : PropTypes) {
+  debugger;
   return (
     <>
-      { currentItem?.title && (
+      {currentItem?.title && (
         <Head>
           <title key="product-head">{currentItem.title}</title>
+          {currentItem && !itemLoading && 
+          <script type='application/ld+json'>
+            {JSON.stringify(generateProductSchema(currentItem))}
+          </script> }
         </Head>
       )}
       <Layout>

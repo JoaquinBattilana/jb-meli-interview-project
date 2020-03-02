@@ -45,6 +45,7 @@ module.exports = {
       "components": [ "Link" ],
       "specialLink": [ "hrefLeft", "hrefRight" ],
       "aspects": [ "invalidHref", "preferButton" ]
-    }]
+    }],
+    "import/prefer-default-export": "off"
   }
 };
