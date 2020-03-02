@@ -74,3 +74,28 @@ Al igual que redux era totalmente innecesario ya que el form de la aplicación e
 Se decidió usar SASS debido a todas las mejoras que trae en contra de CSS, como los Mixins, nesteo de clases o declaración de variables, esto nos hace que sea más escalable el código y se vea más prolijo.
 ### Fonts
 Al no haber un requerimiento de fonts se decidió usar el stack system para que la aplicación sea más performante debido a que no necesita ir a buscar fonts remotamente.
+### Schema org
+Por la misma razon que el SSR se decidio aplicar schema org para que google sepa bien como se define nuestra data ya que la aplicacion es sobre ventas y es importantisimo que nuestra data sea bien indexada, por ser un ejercicio solo se aplico a la vista de producto y puede ser vista en [ESTE](https://search.google.com/structured-data/testing-tool/u/0/#url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com%2Fitems%2FMLA793241006) ejemplo. Si bien hay muchos warnings es porque no tenemos la informacion necesaria, pero las propiedades obligatorias estan.
+
+# Metricas
+
+## Google insights
+
+### Vista del buscador
+https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com
+### Vista del listado de productos
+https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com%2Fitems%3Fsearch%3Dmate
+### Vista de un producto particular
+https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com%2Fitems%2FMLA831793840
+
+Como podemos ver, en los ejemplos de las vistas los puntajes dan mayormente altos, siendo uno de los mayores problemas un script de heroku.
+
+# Nice to have
+
+Aca va una lista de cosas que me gustaria haber implementado e irian perfecto con el flujo de la aplicacion:
+
+- Testing con jest + enzyme
+- PWA
+- sitemap
+- historial de busquedas con localStorage
+
