@@ -1,0 +1,8 @@
+{
+  "product_state_new": "New",
+  "product_state_used": "Used",
+  "product_description_title": "Product description",
+  "product_buy_button": "Buy",
+  "product_alt_image": "Product",
+  "product_quantity_sold": "{{n}} sold"
+}
