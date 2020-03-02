@@ -87,9 +87,7 @@ Al no haber un requerimiento de fonts se decidió usar el stack system para que 
 ### Schema org
 Por la misma razon que el SSR se decidio aplicar schema org para que google sepa bien como se define nuestra data ya que la aplicacion es sobre ventas y es importantisimo que nuestra data sea bien indexada, por ser un ejercicio solo se aplico a la vista de producto y puede ser vista en [ESTE](https://search.google.com/structured-data/testing-tool/u/0/#url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com%2Fitems%2FMLA793241006) ejemplo. Si bien hay muchos warnings es porque no tenemos la informacion necesaria, pero las propiedades obligatorias estan.
 
-# Metricas
-
-## Google insights
+# Google insights
 
 ### Vista del buscador
 https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fjb-meli-frontend.herokuapp.com
@@ -108,4 +106,6 @@ Aca va una lista de cosas que me gustaria haber implementado e irian perfecto co
 - PWA
 - sitemap
 - historial de busquedas con localStorage
+- Typescript en toda la aplicacion
+- Clases globales para estilos
 
