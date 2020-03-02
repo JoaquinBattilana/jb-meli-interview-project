@@ -6,12 +6,13 @@ import glassIcon from '~assets/glassIcon.png';
 import styles from './styles.module.scss';
 import { SEARCH_FORM_FIELDS, SEARCH_FORM } from '~constants/forms';
 import { NAVBAR_NAMESPACE } from '~constants/nameSpaces';
+import { WithTranslation } from 'next-i18next';
 
 interface PropTypes {
-  className: string;
+  className: string
 }
 
-function SearchForm({ handleSubmit, className, t } : PropTypes & InjectedFormProps<SearchFormType>) {
+function SearchForm({ handleSubmit, className, t} : PropTypes & InjectedFormProps<SearchFormType> & WithTranslation) {
   return (
     <form onSubmit={handleSubmit} className={`${className} ${styles.form}`}>
       <button type="submit" className={styles['submit-button']}>
@@ -22,6 +23,7 @@ function SearchForm({ handleSubmit, className, t } : PropTypes & InjectedFormPro
         component="input"
         className={styles.search}
         placeholder={t('search_bar_placeholder')}
+        type="text"
       />
     </form>
   );
@@ -32,5 +34,7 @@ SearchForm.defaultProps = {
 };
 
 export default reduxForm({
-  form: SEARCH_FORM
+  form: SEARCH_FORM,
+  destroyOnUnmount: false,
+  enableReinitialize: true
 })(withTranslation(NAVBAR_NAMESPACE)(SearchForm));

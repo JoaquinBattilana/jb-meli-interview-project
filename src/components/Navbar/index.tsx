@@ -15,12 +15,11 @@ interface PropTypes {
 
 function Navbar({ initialSearchValue, t } : PropTypes & WithTranslation) {
   const handleSubmit = (values: SearchFormType) => {
-    if (values?.searchField) Router.push(`/items?search=${values.searchField}`);
+    if (values?.searchField) Router.push({ pathname: '/items', query: {search: values.searchField}})
   };
   const initialValues = useMemo(() => ({
     searchField: initialSearchValue
   }), [initialSearchValue]);
-
   return (
     <nav className={styles.navbar}>
       <Link href="/">

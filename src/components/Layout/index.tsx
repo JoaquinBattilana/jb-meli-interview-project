@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 interface PropTypes {
   searchQuery?: string,
-  children: any
+  children?: any
 }
 
 function Layout({ children, searchQuery } : PropTypes) {
