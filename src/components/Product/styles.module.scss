@@ -17,6 +17,7 @@
     grid-area: image;
     justify-self: center;
     max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .product-condition {
@@ -45,6 +46,10 @@
 
   .product-description-container {
     grid-area: description;
+
+    .product-description-title {
+      margin-top: 30px;
+    }
 
     .product-description-text {
       font-weight: lighter;

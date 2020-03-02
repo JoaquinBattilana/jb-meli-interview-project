@@ -26,7 +26,7 @@ function Product({
         <button type="button" className={styles['product-buy-button']}>{t('product_buy_button')}</button>
       </section>
       <section className={styles['product-description-container']}>
-        <h2>{t('product_description_title')}</h2>
+        <h2 className={styles['product-description-title']}>{t('product_description_title')}</h2>
         <p className={styles['product-description-text']}>{description}</p>
       </section>
     </div>
