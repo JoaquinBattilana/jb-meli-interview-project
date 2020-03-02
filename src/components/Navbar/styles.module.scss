@@ -2,15 +2,15 @@
 @import 'variables.scss';
 
 .navbar {
-  box-sizing: border-box;
   align-items: center;
-  display: flex;
-  justify-content: flex-start;
   background-color: $gorse;
+  border-bottom: 1px solid $athens-gray;
+  box-sizing: border-box;
+  display: flex;
   height: $navbar-height;
+  justify-content: flex-start;
   padding: 0 10px;
   width: 100%;
-  border-bottom: 1px solid $athens-gray;
 
   .logo {
     height: $navbar-items-height;

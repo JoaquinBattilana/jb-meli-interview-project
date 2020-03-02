@@ -6,6 +6,7 @@ import Layout from '~components/Layout';
 import actionCreators from '~redux/items/actions';
 import { ProductListType } from '~types/reduxTypes';
 import Loading from '~components/Loading';
+import { PRODUCT_NAMESPACE } from '~constants/nameSpaces';
 
 interface PropTypes {
   searchQuery?: string,
@@ -34,7 +35,7 @@ ProductsListView.getInitialProps = async ({ store, query, req }) => {
   const searchQuery = query?.search;
   if (req) await store.dispatch(actionCreators.getItems(searchQuery));
   else { store.dispatch(actionCreators.getItems(searchQuery)); }
-  return { searchQuery, nameSpaceRequired: ['product'] };
+  return { searchQuery, namespacesRequired: [PRODUCT_NAMESPACE] };
 };
 
 const mapStateToProps = store => ({

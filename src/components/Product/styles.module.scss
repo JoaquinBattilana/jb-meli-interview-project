@@ -2,20 +2,20 @@
 @import 'colors.scss';
 
 .product-container {
-  padding: 20px;
   background-color: $white;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto;
   grid-template-areas:
-    "image"
-    "data"
-    "description";
+  "image"
+  "data"
+  "description";
+  padding: 20px;
   
   .product-image {
     align-self: center;
-    justify-self: center;
     grid-area: image;
+    justify-self: center;
     max-width: 100%;
   }
 
@@ -32,14 +32,14 @@
     }
 
     .product-buy-button {
-      margin-top: 20px;
-      height: 40px;
       background-color: $cornflower-blue;
-      width: 80%;
-      color: $white;
       border: 3px solid $cornflower-blue;
       border-radius: 5px;
+      color: $white;
+      height: 40px;
       margin-left: 10%;
+      margin-top: 20px;
+      width: 80%;
     }
   }
 
@@ -47,8 +47,8 @@
     grid-area: description;
 
     .product-description-text {
-      white-space: pre-line;
       font-weight: lighter;
+      white-space: pre-line;
     }
   }
 }

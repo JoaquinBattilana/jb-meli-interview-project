@@ -26,7 +26,8 @@
       "~scss/*": ["./scss/*"],
       "~types/*": ["./types/*"],
       "~assets/*": ["./public/static/assets/*"],
-      "~services/*": ["./services/*"]
+      "~services/*": ["./services/*"],
+      "~constants/*": ["./constants/*"]
     }
   },
   "exclude": [

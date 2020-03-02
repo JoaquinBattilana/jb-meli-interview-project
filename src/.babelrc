@@ -12,7 +12,8 @@
         "~scss": "./src/scss",
         "~types": "./src/types",
         "~assets": "./src/public/static/assets",
-        "~services": "./src/services"
+        "~services": "./src/services",
+        "~constants": "./src/constants"
       }
     }]
   ]

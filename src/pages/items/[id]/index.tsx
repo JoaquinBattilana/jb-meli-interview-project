@@ -35,7 +35,7 @@ ProductView.getInitialProps = async ({ store, query, req }) => {
   const id = query?.id;
   if (req) await store.dispatch(actionCreators.getItemById(id));
   else { store.dispatch(actionCreators.getItemById(id)); }
-  return { nameSpaceRequired: [] };
+  return { namespacesRequired: [] };
 };
 
 const mapStateToProps = state => ({

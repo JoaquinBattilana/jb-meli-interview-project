@@ -1,16 +1,19 @@
 import React, { useMemo } from 'react';
 import Router from 'next/router';
 import Link from 'next/link';
+import { WithTranslation } from 'next-i18next';
 import styles from './styles.module.scss';
 import SearchForm from './components/SearchForm';
 import { SearchFormType } from '~types/formTypes';
+import { withTranslation } from '~config/i18n';
 import meliLogoSmall from '~assets/meliLogoSmall.png';
+import { NAVBAR_NAMESPACE } from '~constants/nameSpaces';
 
 interface PropTypes {
   initialSearchValue?: string
 }
 
-function Navbar({ initialSearchValue } : PropTypes) {
+function Navbar({ initialSearchValue, t } : PropTypes & WithTranslation) {
   const handleSubmit = (values: SearchFormType) => {
     if (values?.searchField) Router.push(`/items?search=${values.searchField}`);
   };
@@ -25,7 +28,7 @@ function Navbar({ initialSearchValue } : PropTypes) {
           <img
             className={styles.logo}
             src={meliLogoSmall}
-            alt="logo"
+            alt={t('navbar_logo')}
           />
         </a>
       </Link>
@@ -34,4 +37,4 @@ function Navbar({ initialSearchValue } : PropTypes) {
   );
 }
 
-export default Navbar;
+export default withTranslation(NAVBAR_NAMESPACE)(Navbar);

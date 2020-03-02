@@ -2,8 +2,8 @@
 @import 'variables.scss';
 
 .form {
-  display: flex;
   align-items: center;
+  display: flex;
   width: 100%;
 
   .submit-button {
@@ -17,16 +17,16 @@
     }
 
     .searchButtonImage {
-      vertical-align: middle;
       height: 50%;
+      vertical-align: middle;
     }
   }
 
   .search {
     border: none;
     height: 100%;
-    width: 100%;
     padding: 0 10px;
+    width: 100%;
 
     &:focus {
       outline: none;
@@ -43,8 +43,8 @@
     width: 60%;
     
     .submit-button {
-      order: 1;
       background-color: $athens-gray;
+      order: 1;
     }
   }
 }
